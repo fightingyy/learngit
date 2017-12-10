@@ -1,0 +1,194 @@
+.mt20 {
+	margin-top: 20px;
+}
+.f12 {
+	font-size: 12px;
+}
+.f14 {
+	font-size: 14px;
+}
+.pd10{
+	padding:10px;
+}
+.hidden {
+	display: none;
+}
+.txt-right {
+	text-align: right;
+}
+.txt-left {
+	text-align: left;
+}
+.txt-center {
+	text-align: center;
+}
+.fb {
+	font-weight: bold;
+}
+#content {
+	margin:0 auto;
+	width: 100%;
+	background-color: #f9fafa;
+	min-height: 600px;
+}
+.content_c {
+	margin:0 auto;
+	width: 1000px;
+	overflow: hidden;
+}
+.search {
+	padding: 20px;
+	padding-top: 50px;
+}
+.search_nav li {
+	display: inline-block;
+	margin-right:10px;
+	margin-left: 15px;
+}
+.search_nav li a {
+	color: #747474;
+	font-size: 20px;
+}
+.search_nav li a.active {
+	color:#24b0e6;
+	border-bottom: 1px solid #24b0e6;
+}
+.search_nav li a:hover{
+	text-decoration: none;
+	color:#24b0e6;
+}
+.search_nav li a:focus{
+	text-decoration: none;
+}
+.search_txt {
+	margin-top: 20px;
+}
+.search_txt select {
+	margin-right: -3px;
+	padding: 7px;
+	padding-top:8px; 
+	font-size: 14px;
+	background-color: #efefef;
+	border: 1px solid #b8b8b8;
+    border-bottom: 1px solid #ccc;
+    border-right: none;
+}
+.search_txt .text {
+	width:620px;
+    padding: 9px 7px;
+    font: 16px arial;
+    border: 1px solid #b8b8b8;
+    border-bottom: 1px solid #ccc;
+    vertical-align: top;
+    outline: none;
+    box-shadow: none;
+}
+.search_txt .btn {
+	cursor: pointer;
+    width: 102px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0;
+    border: 0;
+    background: none;
+    background-color: #24b0e6;
+    font-size: 16px;
+    color: white;
+    box-shadow: none;
+    font-weight: normal;
+}
+.stastics {
+	width: 650px;
+	text-align: center;
+}
+.stastics .stastics_num {
+	display: inline-block;
+	width: 200px;
+}
+.stastics_num div {
+	line-height: 30px;
+	font-size: 16px;
+}
+.stastics_num p {
+}
+.recommend {
+	padding:0 20px;
+}
+.recommend a,.queryResult_list a {
+	color: #000;
+	margin-right: 30px;
+	font-size: 16px;
+	line-height: 22px;
+}
+.recommend a:hover,.queryResult_list a:hover{
+	text-decoration: underline;
+}
+.queryR_search {
+	padding-top: 5px;
+}
+.queryResult {
+	padding:0 20px;
+}
+.queryResult h6,.queryResult h6 span {
+	font-size: 16px;
+	font-weight: normal;
+}
+.queryResult_list {
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+.query_title {
+	font-size: 20px;
+	line-height: 60px;
+	color: #333;
+}
+.top-c {
+	height: 37px;
+	border-left: 1px solid #e4e8eb;
+	border-right: 1px solid #e4e8eb;
+	background: url(../../images/resource/filter_img_17.gif) repeat-x;
+}
+.top-c .top-tab li {
+	float: left;
+}
+.top-c .top-tab li a {
+	display: block;
+	width: 100px;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	color: #474747;
+	border-right: 1px solid #e4e8eb;
+	border-bottom: 1px solid #e4e8eb;
+}
+.top-c .top-tab li a.active {
+	background-color: #fff;
+	height: 34px;
+	line-height: 28px;
+	border-bottom:none;
+	border-top: 4px solid #24b0e6;
+}
+.panel {
+	margin-bottom: 20px;
+}
+.center-c {
+	border: 1px solid #e4e8eb;
+	background-color: #fff;
+	min-height: 200px;
+}
+.logicMap {
+	min-height: 500px;
+}
+.KSource {
+	min-height: 300px;
+}
+.KSource img {
+	margin:10px 20px;
+}
+.table-list tr {
+	line-height:22px;
+}
+.table-list tr td,.table-list tr th {
+	font-size:14px;
+}

@@ -1,0 +1,191 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto Slab';
+	font-size: 14pt;
+	/* 	color:#FFF; */
+	text-align: left;
+}
+
+ul a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+body, html {
+	min-width: 1024px;
+	min-height: 100%;
+}
+
+#ulBo {
+	height: 150px;
+	width: 100%;
+	/* background: #5EC2C7; */
+	background: url(../image/navbg.jpg) no-repeat;
+	background-size: 100% 100%;
+	font-size: 1.3em;
+	overflow: hidden;
+}
+
+#mobanwang_com {
+	/*height:37px;
+	background:#5EC2C7;*/
+	width: 1000px;
+	margin: 0 auto;
+	/*text-align:center;*/
+}
+
+#mobanwang_com a {
+	line-height: 250px;
+	/*     margin: 0 50px 0 30px; */
+}
+
+#mobanwang_com li ul {
+	display: none;
+}
+
+#mobanwang_com li ul li {
+	float: none;
+}
+
+* html #mobanwang_com li ul li {
+	display: inline;
+}
+
+#mobanwang_com li ul a {
+	float: none;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 10px;
+	text-transform: capitalize;
+}
+
+a {
+	text-decoration: none;
+	blr: expression(this.onFocus = this.blur ())
+} /*去掉a标签的虚线框，避免出现奇怪的选中区域*/
+/* html{height:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased} */
+/* body{background-color:#fff;color:#040404;min-height:100%;height:auto!important;height:100%} */
+
+/* img,fieldset{border:0;vertical-align:middle} */
+
+/* .clear{display:block;overflow:hidden;clear:both;height:0;line-height:0;font-size:0;} */
+/* .cont{width:1200px;margin:0px auto;} */
+/* .textcent{ text-align:center} */
+.head {
+	height: 70px;
+	width: 100%;
+}
+
+.yanse {
+	background: #be4355;
+	width: 50%;
+	position: absolute;
+	right: 0px;
+	z-index: -1px;
+	float: right;
+	height: 70px
+}
+
+.head-left {
+	float: left;
+	height: 41px;
+	width: 135px;
+	margin-left: 47px;
+	padding-top: 15px;
+}
+/*nav导航盒子*/
+.nav {
+	text-align: center;
+	font-size: 1.2em;
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 45px;
+}
+/*nav-main*/
+ul.nav-main {
+	width: 100%;
+	height: 100%;
+	list-style-type: none
+}
+
+ul.nav-main span {
+	display: inline-block;
+	margin-left: 18px;
+	width: 12px;
+	height: 9px;
+	background: url(../image/sj1.png) no-repeat center center
+}
+
+/*图标向上旋转*/
+.hover-up {
+	transition-duration: .5s;
+	/* transform:rotate(180deg);-webkit-transform:rotate(180deg); */
+}
+/*图标向下旋转*/
+.hover-down {
+	transition-duration: .5s;
+	transform: rotate(0);
+	-webkit-transform: rotate(0)
+}
+/*导航条设置*/
+ul.nav-main>li {
+	width: 190px;
+	height: 100%;
+	display: block;
+	float: left;
+	color: #fff;
+	margin-right: 1px;
+	cursor: pointer
+}
+/* ul.nav-main>li:hover{background:#fff ; color:#be4355 } */
+/* ul.nav-main>li:hover span{ background:url(../image/sg3.jpg)  no-repeat center center;} */
+/*隐藏盒子设置*/
+div.hidden-box {
+	width: 160px;
+	position: absolute;
+	display: none;
+	background: #315565 url(../image/sj2.png) no-repeat top center;
+	top: 38px;
+	filter: alpha(opacity = 80);
+	-moz-opacity: 0.8;
+	opacity: 1;
+}
+
+.hidden-box>ul {
+	list-style-type: none;
+	color: #fff;
+	cursor: pointer;
+	padding-top: 8px;
+	padding-bottom: 3em;
+}
+
+.hidden-box>ul li {
+	font-size: 0.7em;
+}
+/*.hidden-box li:hover{background:#643519;color:#fff}*/
+
+/*隐藏盒子位置设置*/
+.hidden-loc-index {
+	left: 385px
+}
+
+.hidden-loc-us {
+	left: 417px
+}
+
+.hidden-loc-info {
+	left: 550px
+}
+
+.box04 {
+	left: 683px
+}

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 设置统一字符集 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<!-- 设置为开发模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- 设置浏览器缓存 -->
+	<constant name="struts.serve.static.browserCache" value="false"></constant>
+	<!-- 设置加载国际化资源 -->
+	<constant name="struts.i18n.reload" value="true"></constant>
+	<!-- 记载struts配置文件 -->
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<!-- 不使用标签自带的样式 -->
+	<constant name="struts.ui.theme" value="simple" />
+
+	<package name="com" extends="struts-default,json-default">
+		<!-- 定义一个简单的Action -->
+		<action name="answer" class="com.ld.action.AnswerAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="showQuestion" class="com.ld.action.ShowAction" method="execute">
+			<result name="success">./show.jsp</result>
+		</action>
+
+		<action name="AddAction" class="com.ld.action.RelatedAction">
+			<result>./result.jsp</result>
+		</action>
+
+		<action name="TestAction" class="com.ld.action.TestAction">
+			<result type="json">
+				<param name="root">response</param>
+			</result>
+		</action>
+
+		<action name="AddRegexTemplate" class="com.ld.action.AddTemplate" method="AddRegexTemplate">
+			<result type="json">
+				<param name="root">response</param>
+			</result>
+		</action>
+
+		<action name="AddQuestionTemplate" class="com.ld.action.AddTemplate" method="AddQuestionTemplate">
+			<result type="json">
+				<param name="root">response</param>
+			</result>
+		</action>
+
+		<action name="ViewTemplate" class="com.ld.action.ViewTemplate" method="ViewTemplate">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+
+		<action name="*">
+			<result>/index.jsp</result>
+		</action>
+
+		<action name="testAction" class="com.ld.action.TestAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+
+		<action name="uploadFile" class="com.ld.action.TestAction" method="uploadFile">
+			<!-- 动态设置savePath的属性值 -->
+			<param name="savePath">/upload</param>
+			
+			<result name="success" type="json">/test.jsp?response?${response}</result>
+			<result name="input">/test.jsp</result>
+		</action>
+
+		<action name="modify" class="com.ld.action.ModifyTemplate">
+			<result type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+		<action name="delete" class="com.ld.action.ModifyTemplate" method="deleteTemplate">
+			<result type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+
+		<action name="import" class="com.ld.action.ModifyTemplate" method="Import">
+			<result type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+
+		<action name="login" class="com.ld.action.LoginAction">
+			<result name="success">./index.jsp</result>
+			<result name="error">./login.jsp</result>
+		</action>
+
+		<action name="logout" class="com.ld.action.LoginAction" method="logout">
+			<result>./index.jsp</result>
+		</action>
+
+		<action name="update" class="com.ld.action.UpdateAction">
+			<result type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+
+		<action name="importTemplate" class="com.ld.action.UpdateAction"
+			method="importTemplate">
+			<result type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+
+		<action name="updateTerm" class="com.ld.action.UpdateAction"
+			method="updateTerm">
+			<result type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+
+		<action name="updateTemplate" class="com.ld.action.UpdateAction"
+			method="updateTemplate">
+			<result type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+
+		<action name="show" class="com.ld.action.UpdateAction" method="show">
+			<result type="json">
+				<param name="root">data</param>
+			</result>
+		</action>
+		
+		<action name="showResult" class="com.ld.action.ShowResult">
+			<result type="json">
+				<param name="root">list</param>
+			</result>
+		</action>
+	
+		
+		<action name="showExcel" class="com.ld.action.MergeTemplate" method="showExcel">
+			<result name="success">./mergeTemplate.jsp</result>
+			<result name="error">./Update.jsp</result>
+		</action>
+		
+		<action name="merge" class="com.ld.action.MergeTemplate">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		
+		<action name="getAnswer" class="com.ld.action.AnswerService">
+			<result name="success" type="json">
+				<param name="root">resultArray</param>
+				<!-- 指定是否序列化空的属性 -->
+                 <param name="excludeNullProperties">true</param>
+                 <!-- 这里指定将序列化list中的那些属性 -->
+                 <param name="includeProperties">resultArray.* </param>
+                 
+			</result>
+		</action>
+
+	</package>
+</struts>
